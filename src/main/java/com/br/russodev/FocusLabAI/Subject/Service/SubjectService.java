@@ -4,8 +4,8 @@ import com.br.russodev.FocusLabAI.StudySession.Repository.StudySessionRepository
 import com.br.russodev.FocusLabAI.Subject.DTO.SubjectRequestDTO;
 import com.br.russodev.FocusLabAI.Subject.DTO.SubjectResponseDTO;
 import com.br.russodev.FocusLabAI.Subject.Entity.SubjectEntity;
-import com.br.russodev.FocusLabAI.Subject.Exceptions.SubjectException;
-import com.br.russodev.FocusLabAI.Subject.Exceptions.SubjectNotFoundException;
+import com.br.russodev.FocusLabAI.Exceptions.SubjectException;
+import com.br.russodev.FocusLabAI.Exceptions.SubjectNotFoundException;
 import com.br.russodev.FocusLabAI.Subject.Mapper.SubjectMapper;
 import com.br.russodev.FocusLabAI.Subject.Repository.SubjectRepository;
 import lombok.RequiredArgsConstructor;
