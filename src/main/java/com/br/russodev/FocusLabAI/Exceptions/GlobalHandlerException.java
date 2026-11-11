@@ -1,4 +1,4 @@
-package com.br.russodev.FocusLabAI.Subject.Exceptions;
+package com.br.russodev.FocusLabAI.Exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +31,18 @@ public class GlobalHandlerException {
                 ? erro.getDefaultMessage()
                 : "Invalid data";
         RestErrorMessage restErrorMessage = new RestErrorMessage(HttpStatus.BAD_REQUEST, message);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(restErrorMessage);
+    }
+
+    @ExceptionHandler(StudySessionNotFoundException.class)
+    public ResponseEntity<RestErrorMessage> studySessionNotFoudHandler(StudySessionNotFoundException studySessionNotFoundException){
+        RestErrorMessage restErrorMessage = new RestErrorMessage(HttpStatus.NOT_FOUND, studySessionNotFoundException.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(restErrorMessage);
+    }
+
+    @ExceptionHandler(StudySessionException.class)
+    public ResponseEntity<RestErrorMessage> studySessionHandler(StudySessionException studySessionException){
+        RestErrorMessage restErrorMessage = new RestErrorMessage(HttpStatus.BAD_REQUEST, studySessionException.getMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(restErrorMessage);
     }
 

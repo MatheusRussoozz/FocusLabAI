@@ -1,4 +1,4 @@
-package com.br.russodev.FocusLabAI.Subject.Exceptions;
+package com.br.russodev.FocusLabAI.Exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
