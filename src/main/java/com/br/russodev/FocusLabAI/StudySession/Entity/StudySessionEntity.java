@@ -40,4 +40,10 @@ public class StudySessionEntity {
         this.minutes = minutes;
         this.notes = notes;
     }
+
+    public StudySessionEntity(LocalDateTime date, Integer minutes, String notes) {
+        this.date = date;
+        this.minutes = minutes;
+        this.notes = notes;
+    }
 }
